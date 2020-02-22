@@ -124,10 +124,10 @@ while True:
     else:
         snakeBody.pop()
 
-    if not foodSpawn:
-        foodPos = [random.randrange(1,(width//10))*10,random.randrange(1,height//10)*10]
-    # Yani yemek yoksa ekranda verilen değerlerde yemek oluştur ve yemek olduğunu söyle
-    foodSpawn = True
+    if foodSpawn == False:
+        food_Pos = [random.randrange(1, width // 10) * 10 , random.randrange(1, height // 10) * 10]
+        foodSpawn = True
+
 
     # Yılanı çizelim
     play_Surface.fill(black)
