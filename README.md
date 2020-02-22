@@ -7,5 +7,5 @@ projede bazı buglar var.Onları çözüp yeniden ekleyeceğim buraya.
 # Kullanım İçin
 Pygame modülünü yüklemeniz gerekmekte
 
-# pip3 install pygame 
-# python3 snakeGame.py
+-> pip3 install pygame 
+-> python3 snakeGame.py
