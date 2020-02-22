@@ -18,7 +18,8 @@ else:
 hiz = 17
 
 # harita (bknz: play surface)
-play_Surface = pygame.display.set_mode((900,540))
+(width, height) = (900,530)
+play_Surface = pygame.display.set_mode((width, height))
 pygame.display.set_caption("Yılan Oyunu")
 
 # Oyun renklerini belirliyoruz
@@ -48,7 +49,7 @@ score = 0 # Oyun skorunun saklı tutulduğu değişken
 # İlk önce oyun bitiş fonksiyonunu oluşturuyoruz
 
 def GameOver():
-    myFont = pygame.sysfont('monospace',72) # Oyun bittiğindeki font
+    myFont = pygame.font.SysFont('monospace',72) # Oyun bittiğindeki font
     overMessage = myFont.render('Oyun Bitti !',True,red)
     overRect = overMessage.get_rect()
     overRect.midtop = (370,15)
@@ -62,7 +63,7 @@ def GameOver():
 
 def ShowScore(choice=1): #Oyun skoru için bir fonksiyon oluşturduk
     scFont = pygame.font.SysFont('monospace', 30)
-    scSurface = scFont.render('Score: '+ str(score), True, white)
+    scSurface = scFont.render('Skor: '+ str(score), True, white)
     scRect = scSurface.get_rect()
 
     if choice == 1:
@@ -123,10 +124,8 @@ while True:
     else:
         snakeBody.pop()
 
-    # Yem yeme
-
-    if foodSpawn == False:
-        foodPos = [random.randrange(1,72)*10,random.randrange(1,46)*10]
+    if not foodSpawn:
+        foodPos = [random.randrange(1,(width//10))*10,random.randrange(1,height//10)*10]
     # Yani yemek yoksa ekranda verilen değerlerde yemek oluştur ve yemek olduğunu söyle
     foodSpawn = True
 
