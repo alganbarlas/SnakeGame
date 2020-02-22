@@ -52,7 +52,8 @@ def GameOver():
     myFont = pygame.font.SysFont('monospace',72) # Oyun bittiğindeki font
     overMessage = myFont.render('Oyun Bitti !',True,red)
     overRect = overMessage.get_rect()
-    overRect.midtop = (370,15)
+    overRect.midtop = (450,265)
+    play_Surface.fill(black)
     play_Surface.blit(overMessage, overRect)
     # Buraya kadar bitiş ekranını ayarladık, şimdi skoru göstereceğiz
     ShowScore(0)
