@@ -8,4 +8,5 @@ projede bazı buglar var.Onları çözüp yeniden ekleyeceğim buraya.
 Pygame modülünü yüklemeniz gerekmekte
 
 -> pip3 install pygame 
+
 -> python3 snakeGame.py
